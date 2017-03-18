@@ -1,3 +1,4 @@
+using jquery as dependency, for using with webpack.
 
 [![npm version](https://badge.fury.io/js/ng2-signalr.svg)](https://badge.fury.io/js/ng2-signalr)
 ![live demo](https://img.shields.io/badge/demo-live-orange.svg)
