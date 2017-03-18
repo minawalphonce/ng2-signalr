@@ -7,13 +7,11 @@ coverage/
 Thumbs.db
 .DS_Store
 
-*.js
 !webpack.config.js
 !webpack.test.config.js
 !karma.conf.js
 !karma.specs.js
 *.map
-*.d.ts
 .idea/
 *.iml
 
