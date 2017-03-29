@@ -5,7 +5,7 @@ import { SignalR } from './signalr';
 import { SignalRConfiguration } from './signalr.configuration';
 var sr = require('signalr-no-jquery');
 
-const SIGNALR_CONFIGURATION = new OpaqueToken('SIGNALR_CONFIGURATION');
+export const SIGNALR_CONFIGURATION = new OpaqueToken('SIGNALR_CONFIGURATION');
 
 export function createSignalr(configuration: SignalRConfiguration, zone: NgZone) {
 
@@ -14,7 +14,7 @@ export function createSignalr(configuration: SignalRConfiguration, zone: NgZone)
     return new SignalR(configuration, zone, jConnectionFn);
 }
 
-function getJConnectionFn(): any {
+export function getJConnectionFn(): any {
     let hubConnectionFn = sr.hubConnection;
     if (hubConnectionFn == null) throw new Error('Signalr failed to initialize. Script \'jquery.signalR.js\' is missing. Please make sure to include \'jquery.signalR.js\' script.');
     return hubConnectionFn;
